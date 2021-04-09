@@ -19,19 +19,25 @@ function Form(props) {
 
     return (
         <form onSubmit={(event) => event.preventDefault()}>
-            <div className="d-flex">
-                <input
-                    className="form-control mr-2"
-                    type="number"
-                    value={inputValue}
-                    onChange={handleChange}
-                />
-                <button
-                    className="btn btn-primary ml-1"
-                    onClick={() => submitForm()}
-                >
-                    Submit
-                </button>
+            <div className="d-flex justify-content-center">
+                <div className="d-flex row" id="responsive-width">
+                    <div className="col-sm-11 mb-3">
+                        <input
+                            className="form-control"
+                            type="number"
+                            value={inputValue}
+                            onChange={handleChange}
+                        />
+                    </div>
+                    <div className="col-sm-1">
+                        <button
+                            className="btn btn-primary ml-n2"
+                            onClick={() => submitForm()}
+                        >
+                            Submit
+                            </button>
+                    </div>
+                </div>
             </div>
         </form>
     );

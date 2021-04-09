@@ -1,0 +1,15 @@
+#responsive-width {
+    width: 65%;
+}
+
+@media (max-width: 425px) {
+    #responsive-width {
+        width: 100%;
+    }
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+    #responsive-width {
+        width: 75%;
+    }
+}
