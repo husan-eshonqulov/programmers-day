@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-Form.propTypes = {
-    handleSubmit: PropTypes.func.isRequired,
-}
+// Form.propTypes = {
+//     handleSubmit: PropTypes.func.isRequired,
+// }
 
 function Form(props) {
-    const [inputValue, setInputValue] = useState(null);
+    const [inputValue, setInputValue] = useState('');
 
     const handleChange = ({ target }) => {
         const { value } = target;
@@ -25,6 +25,7 @@ function Form(props) {
                         <input
                             className="form-control"
                             type="number"
+                            placeholder="Enter any year"
                             value={inputValue}
                             onChange={handleChange}
                         />
@@ -35,7 +36,7 @@ function Form(props) {
                             onClick={() => submitForm()}
                         >
                             Submit
-                            </button>
+                        </button>
                     </div>
                 </div>
             </div>
