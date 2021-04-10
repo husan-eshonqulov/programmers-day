@@ -1,9 +1,5 @@
-import App from '../Components/App';
 import Form from '../Components/Form';
-import DetDate from '../Components/DetDate';
-
 import { render, screen, fireEvent } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
 
 describe('Form', () => {
     test('input\'s initial value should be empty', () => {
@@ -21,4 +17,30 @@ describe('Form', () => {
 
         expect(input.value).toBe('2021');
     });
+
+
+    test('submit button should be called', () => {
+        const onSubmit = jest.fn();
+        render(<Form handleSubmit={onSubmit} />);
+
+        const button = screen.getByRole('button');
+
+        fireEvent.click(button);
+
+        expect(onSubmit).toHaveBeenCalled();
+    });
+
+    test('submit button should be called correctly', () => {
+        const onSubmit = jest.fn();
+        render(<Form handleSubmit={onSubmit} />);
+
+        const input = screen.getByPlaceholderText('Enter any year');
+        const button = screen.getByRole('button');
+
+        fireEvent.change(input, { target: { value: '2025' } });
+        fireEvent.click(button);
+
+        expect(onSubmit).toHaveBeenCalled();
+    });
+
 });
