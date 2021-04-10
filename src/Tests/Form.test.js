@@ -42,5 +42,4 @@ describe('Form', () => {
 
         expect(onSubmit).toHaveBeenCalled();
     });
-
 });
