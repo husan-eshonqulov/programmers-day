@@ -28,7 +28,7 @@ function Date(props) {
         );
     }
     else {
-        return (<h2 data-testid="res-date"></h2>);
+        return (<h2 data-testid="res-date">{null}</h2>);
     }
 }
 
