@@ -15,7 +15,7 @@ function Date(props) {
             setYear(infoAboutProgDay.year);
             setWeekDay(infoAboutProgDay.weekDay);
         }
-    });
+    }, [props.year]);
 
     if (date != null) {
         return (
