@@ -1,13 +1,14 @@
 import Form from '../Components/Form';
 import { render, screen, fireEvent } from '@testing-library/react';
 
-describe('Form', () => {
+describe('<Form />', () => {
     test('input\'s initial value should be empty', () => {
         render(<Form />);
         const input = screen.getByPlaceholderText('Enter any year');
 
         expect(input.value).toBe('');
     });
+    // I have a question for above test
 
     test('updates on change for input', () => {
         render(<Form />);
@@ -19,7 +20,7 @@ describe('Form', () => {
     });
 
 
-    test('submit button should be called', () => {
+    test('handleSubmit function should be called', () => {
         const onSubmit = jest.fn();
         render(<Form handleSubmit={onSubmit} />);
 
@@ -30,7 +31,7 @@ describe('Form', () => {
         expect(onSubmit).toHaveBeenCalled();
     });
 
-    test('submit button should be called correctly', () => {
+    test('handleSubmit function should be called when input\'s value updates', () => {
         const onSubmit = jest.fn();
         render(<Form handleSubmit={onSubmit} />);
 

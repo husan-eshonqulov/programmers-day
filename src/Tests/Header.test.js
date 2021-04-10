@@ -2,8 +2,8 @@ import '../Components/Header';
 import { render, screen } from '@testing-library/react';
 import Header from '../Components/Header';
 
-describe('Header', () => {
-    test('Header is not empty', () => {
+describe('<Header />', () => {
+    test('Header should be not empty', () => {
         render(<Header />);
         const heading = screen.getByTestId('heading');
 
