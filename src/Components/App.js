@@ -7,8 +7,9 @@ function App() {
     const [year, setYear] = useState(null);
 
     const handleSubmit = (inputVal) => {
-        console.log('clicked');
-        setYear(inputVal);
+        if (inputVal !== '') {
+            setYear(inputVal);
+        }
     }
 
     return (

@@ -23,7 +23,7 @@ function Date(props) {
                 className="mt-5 text-secondary"
                 data-testid="res-date"
             >
-                {date} {month} , &nbsp; {Year} <span className="d-block mt-3">{weekDay}</span>
+                {date} {month} , {Year} <span className="d-block mt-3">{weekDay}</span>
             </h2>
         );
     }
