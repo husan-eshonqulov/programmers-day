@@ -1,3 +1,3 @@
 # Programmers Day
 
-Bu dasturda siz istalgan yilning "Dasturchilar kuni"ni aniqlashingiz mumkin  
+With this app, you can find out the International Programmers Day which you want to know releted with your input year.
